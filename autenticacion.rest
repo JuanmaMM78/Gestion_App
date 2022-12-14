@@ -1,0 +1,23 @@
+### USER LOGIN
+
+/// LOGIN DE USUARIO
+POST http://localhost:3000/api/users/login
+Content-Type: application/json
+
+{
+    "mail_user": "juan@hotmail.com",
+    "password_user": "Admin123"
+}
+
+
+###
+/// user
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjM5LCJ1c2VyUm9sZSI6InVzZXIiLCJleHBpcmVzQXQiOjE2NzE4NTU1MzksImlhdCI6MTY2ODI1NTUzOX0.SPKuMAPu1GzsWd9m3c-Xe4s0OQcqg56w3c61UJz96Ro
+
+###
+/// admin
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjM4LCJ1c2VyUm9sZSI6ImFkbWluIiwiZXhwaXJlc0F0IjoxNjcxODU1NjMxLCJpYXQiOjE2NjgyNTU2MzF9.B_tizSr6ACBLIoOa3IlOkhQkg62eaJY3KMTwYcddqkE
+
+###
+/// master
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjM2LCJ1c2VyUm9sZSI6Im1hc3RlciIsImV4cGlyZXNBdCI6MTY3MTg1NTY5MywiaWF0IjoxNjY4MjU1NjkzfQ.c_-mBLI-lqN9gMQ-dWtsG47tJIHBe5nsg76kXGhTkCs

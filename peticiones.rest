@@ -1,0 +1,104 @@
+### API products
+GET http://localhost:3000/api/products
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjM5LCJ1c2VyUm9sZSI6InVzZXIiLCJleHBpcmVzQXQiOjE2NjgyODY1NjQsImlhdCI6MTY2ODI1MDU2NH0.mOSQoXqRQeYjSLWqHt3Cj-2RchPYzSvYnGeUkO3mdx4
+
+
+POST http://localhost:3000/api/products
+Content-Type: application/json
+
+{
+    "name_product": "sandia",
+    "origin": "campo",
+    "caliber":"mediano",
+    "price":1.20,
+    "stock_initial": 200,
+    "stock_now": 180,
+    "status": 0
+}
+
+
+//------------------------------------------------
+
+### API USERS 
+GET http://localhost:3000/api/users
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjM5LCJ1c2VyUm9sZSI6InVzZXIiLCJleHBpcmVzQXQiOjE2NjgyODY1NjQsImlhdCI6MTY2ODI1MDU2NH0.mOSQoXqRQeYjSLWqHt3Cj-2RchPYzSvYnGeUkO3mdx4
+
+###
+POST http://localhost:3000/api/users/register
+Content-Type: application/json
+
+{
+    "name_user": "Paco",
+    "surname_user":"Pizarroso",
+    "mail_user":"martinpizarroso@gmail.com",
+    "password_user": "5534Ggr",
+    "role": "user",
+    "status": 1
+}
+
+###
+PUT http://localhost:3000/api/users/6
+Content-Type: application/json
+
+{
+    "name_user": "Jose",
+    "surname_user":"Pizarroso",
+    "mail_user":"ivanpizarroso@gmail.com",
+    "password_user": "5534Ggr",
+    "role": "user",
+    "status": 0
+}
+
+
+//------------------------------------------------
+
+### API orders
+GET http://localhost:3000/api/orders
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjM2LCJ1c2VyUm9sZSI6Im1hc3RlciIsImV4cGlyZXNBdCI6MTY3MTg1NTY5MywiaWF0IjoxNjY4MjU1NjkzfQ.c_-mBLI-lqN9gMQ-dWtsG47tJIHBe5nsg76kXGhTkCs
+
+
+###
+POST http://localhost:3000/api/orders
+Content-Type: application/json
+
+{
+"id_client": 6,
+"id_product": 10,
+"vol_sale": 1000,
+"shipping": "recogida",
+"meth_payment":"30 dias",
+"price_sale": 0.188,
+"id_user": 2,
+"date_order": "2022-11-10",
+"status": 1
+}
+
+
+//------------------------------------------------
+
+### API CLIENTS
+GET http://localhost:3000/api/clients
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjM2LCJ1c2VyUm9sZSI6Im1hc3RlciIsImV4cGlyZXNBdCI6MTY3MTg1NTY5MywiaWF0IjoxNjY4MjU1NjkzfQ.c_-mBLI-lqN9gMQ-dWtsG47tJIHBe5nsg76kXGhTkCs
+
+###
+POST http://localhost:3000/api/clients/register
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjM2LCJ1c2VyUm9sZSI6Im1hc3RlciIsImV4cGlyZXNBdCI6MTY3MTg1NTY5MywiaWF0IjoxNjY4MjU1NjkzfQ.c_-mBLI-lqN9gMQ-dWtsG47tJIHBe5nsg76kXGhTkCs
+Content-Type: application/json
+
+{
+"name_client":"Antonio Meyer",
+"mail_client":"hugomeyer@yahoo.es",
+"direction": "HovenStrasse 31, 1. Switzerland",
+"phone": "4178899274"
+}
+
+### 
+PUT http://localhost:3000/api/clients/edit/8
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjM2LCJ1c2VyUm9sZSI6Im1hc3RlciIsImV4cGlyZXNBdCI6MTY3MTg1NTY5MywiaWF0IjoxNjY4MjU1NjkzfQ.c_-mBLI-lqN9gMQ-dWtsG47tJIHBe5nsg76kXGhTkCs
+
+{
+"name_client":"Antonio",
+"mail_client":"gervasio12@gmail.com",
+"direction": "Calle Pichote, España",
+"phone": "34788992746"
+}
