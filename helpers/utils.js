@@ -25,9 +25,9 @@ const createToken = (user) => {
     const obj = {
         userId: user.id_user,
         userRole: user.role,
-        expiresAt: dayjs().add(1000, 'hours').unix()
+        expiresAt: dayjs().add(30, 'minutes').unix()
     }
-    return jwt.sign(obj, 'en un lugar de la mancha');
+    return jwt.sign(obj, process.env.JWT_TOKEN);
 }
 
 
@@ -39,12 +39,12 @@ const sendEmail = (mailUser, text, link, subject) => {
         port: 465,
         secure: true, 
         auth: {
-        user: 'ThorAppProject@gmail.com',
-        pass: 'cvporfxuzlzdjzyu',
+        user: process.env.MAIL_USER,
+        pass: process.env.MAIL_PASS,
         },
     });    
     const mailDate = {
-        from: "ThorAppProject@gmail.com",
+        from: process.env.MAIL_USER,
         to: mailUser,
         subject: subject,
         text: text,
