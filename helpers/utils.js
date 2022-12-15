@@ -67,7 +67,7 @@ const Email = async(orderId, status, mailUser, user, userName, comment) => {
             const UserName = userName.toUpperCase();
             const token = createToken(user);
             const text = "Email de Validación de Pedido";
-            const link = `<h3>Hola ${UserName} el pedido <strong>nº${orderId}</strong> esta en el estado de <strong>${Status}</strong> </h3><p>Comentario: ${comment}<p/><br><P>Pincha en este enlace... <a href="https://unrivaled-sundae-754277.netlify.app/login/">Link</a>...para ver el pedido.</P>`   
+            const link = `<h3>Hola ${UserName} el pedido <strong>nº${orderId}</strong> esta en el estado de <strong>${Status}</strong> </h3><p>Comentario: ${comment}<p/><br><P>Pincha en este enlace... <a href="https://gestion-ofertas.netlify.app/login>Link</a>...para ver el pedido.</P>`   
             return sendEmail(mailUser,text,link,subject)             
    
 }

@@ -177,7 +177,7 @@ router.post('/send-email/recovery/:mailUser',
             const token = createToken(user);
             const subject = "ThorAPP restablecer Usuario"
             const text = "Email de Recuperacion del Password";
-            const link = `<h2>Hola ${user.name_user}</h2><p>Pincha en este enlace... <a href="https://unrivaled-sundae-754277.netlify.app/passwords?${token}">Link</a>...para cambiar tu Password.</p>`       
+            const link = `<h2>Hola ${user.name_user}</h2><p>Pincha en este enlace... <a href="https://gestion-ofertas.netlify.app/passwords?${token}">Link</a>...para cambiar tu Password.</p>`       
             const mail = await sendEmail(mailUser,text,link,subject)
         res.json(mail);
     } catch (err) {
