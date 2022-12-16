@@ -161,10 +161,10 @@ router.put('/edit/:productId', upload.single('image'),
         /// PREPARAMOS LA RUTA DEL ARCHIVO IMAGEN PARA INSERTARLO        
         const extension = '.' + req.file.mimetype.split('/')[1];
         const newName = req.file.filename + extension;
-        const newPath = req.file.path + extension;
-     
+        const newPath = req.file.path + extension;    
         fs.renameSync(req.file.path, newPath);
         req.body.image = newName;
+        
         /// ACTUALIZAMOS EL PRODUCTO
         const result = await upDate(productId, req.body);
         res.json(result);
